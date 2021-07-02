@@ -63,20 +63,11 @@ window.onload = function (){
                 
                 function addData(data) {
                     if(data){
-                        for (var i = 0; i < 7; i++) {
-                            if(date > 0){
-                                let date = 31
+                        for (var i = 0; i < 7; i++) { 
                                 dataPoints.push({
                                     x: Number(date-i),
                                     y: Number(data[i].ask)
                                });
-                            } else{
-                                dataPoints.push({
-                                    x: Number(date-i),
-                                    y: Number(data[i].ask)
-                               });
-                            }
-                             
                         }
                     }
                     
