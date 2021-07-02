@@ -77,7 +77,6 @@ window.onload = function (){
                                });
                             }
                              
-                            console.log(dataPoints)
                         }
                     }
                     
