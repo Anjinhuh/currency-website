@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <!-- PADRÃO -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--VIEW PORT-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Dólar Hoje</title>
+</head>
+<body>
+    <div class="content">
+        <header class="header-page">
+            <img src="../public/img/logo.svg" alt="Logo Site"/>
+            <p style="margin-left: 72rem;"> Valores</p>
+            <p>Menu Principal</p>       
+        </header>
+
+        <aside>
+            <div class="container">
+                <section>
+                    <p>Moedas mais procuradas!</p>
+
+                    <div class="currency-box">
+                        <div class="fix-currency-box">
+                            <p>USD-BRL</p>
+                            <span>$0.35</span>
+                        </div>
+                        <div class="fix-image-box">
+                            <img src="../public/img/graphic-plus.svg" alt="Indicador de variação positiva ou negativa"/>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </aside>
+        <main>
+            <div class="principal">
+                <p>USD-BRL</p>
+                <div class="retangle-info">
+                    <div class="last-price">
+                        <p>Ultimo preço de venda</p>
+                        <span>0.35$</span>
+                    </div>
+                    <div class="last-24hour">
+                        <p>Variação percentual 24 horas</p>
+                        <span style="color:rgb(57, 145, 76);">0.04%</span>
+                    </div>
+                   
+                </div>
+                <div id="chartContainer"></div>
+                <div id="footer-retangle">
+                    .
+                    <p>Preço de compra em reais hoje</p>
+                    <p>Preço de venda em reais hoje</p>
+                </div>
+            </div>
+        </main>
+            
+
+    </div>
+    
+</body>
+
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+<script src="../js/index.js"></script>
+<html>
