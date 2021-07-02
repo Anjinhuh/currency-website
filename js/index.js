@@ -21,20 +21,15 @@
    INFORMACOES ULTIMOS 7 DIAS
 */
     
-    const date = new Date()
-    const ok = new Date()
-    const dataAtual = String(date.getUTCFullYear())+'0'+String(date.getUTCMonth()+1)+ date.getUTCDate()
-    const dataAntiga = String(dataAtual-7)
+
 window.onload = function (){
-    if(dataAntiga < 0){
-        dataAtual = 31
-    }
-    fetch(`https://economia.awesomeapi.com.br/USD-BRL/7?start_data=${dataAntiga}&end_date=${dataAtual}`).then(x =>{
+
+    fetch(`https://economia.awesomeapi.com.br/json/daily/USD/7`).then(x =>{
         return x.json()
     }).then(precoDolar =>{
-        const dolar = precoDolar[0]
-        const date  =  String(dolar.create_date[8]  +  dolar.create_date[9])
-
+        const dolar = precoDolar
+        //console.log(dolar)        
+        
 
                 var dataPoints = [];
                 
@@ -46,7 +41,7 @@ window.onload = function (){
                     },
                     axisX: {
                         valueFormatString: dataPoints.x,
-                        interval:1,
+                        interval: 1 ,
                     },
                     axisY: {
                         title: "R$",
@@ -64,8 +59,17 @@ window.onload = function (){
                 function addData(data) {
                     if(data){
                         for (var i = 0; i < 7; i++) { 
+                                
+                                let dateNew = data[i].timestamp
+                                function EpochToDate(epoch) {
+                                    if (epoch < 10000000000)
+                                        epoch *= 1000; // convert to milliseconds (Epoch is usually expressed in seconds, but Javascript uses Milliseconds)
+                                    var epoch = epoch + (new Date().getTimezoneOffset() * -1); //for timeZone        
+                                    return new Date(epoch);
+                                }
+                                console.log( EpochToDate(dateNew).getUTCDate())
                                 dataPoints.push({
-                                    x: Number(date-i),
+                                    x: Number(EpochToDate(dateNew).getUTCDate()),
                                     y: Number(data[i].ask)
                                });
                         }
@@ -74,8 +78,7 @@ window.onload = function (){
                     $("#chartContainer").CanvasJSChart(options);
                 
                 }
-                $.getJSON(`https://economia.awesomeapi.com.br/USD-BRL/7?start_data=${dataAntiga}&end_date=${dataAtual}`, addData);
-                
+                $.getJSON(`https://economia.awesomeapi.com.br/json/daily/USD/7`, addData);
                 
                 
                 
