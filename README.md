@@ -1,6 +1,7 @@
 # currency-website
 A currency website, with graphics.
-<br>` The graphics have problems into date. Because the date stay negative. `
+<br>` The graphics have problems into date. Because the date stay negative. 
+        I want to  fix it!!!`
 <br>
 `Can help me?`
 <br>
@@ -8,4 +9,3 @@ A currency website, with graphics.
 <br>
 `juliano.alfredo86@gmail.com 
 `
-
