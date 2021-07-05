@@ -1,0 +1,13 @@
+for(var i=0; i<4; i++){
+                            $(".add-currency-box").append(`<div class="currency-box">
+                            <div class="fix-currency-box">
+                                <p>USD-BRL</p>
+                                <span>${precoDolar[0].bid}</span>
+                            </div>
+                            <div class="fix-image-box">
+
+                                <img src="../public/img/graphic-plus.svg" alt="Indicador de variação positiva ou negativa"/>
+                                
+                            </div>
+                        </div>`)
+                        }

@@ -20,18 +20,13 @@
         <aside>
             <div class="container">
                 <section>
-                    <p>Moedas mais procuradas!</p>
 
-                    <div class="currency-box">
-                        <div class="fix-currency-box">
-                            <p>USD-BRL</p>
-                            <span>$0.35</span>
-                        </div>
-                        <div class="fix-image-box">
-                            <img src="../public/img/graphic-plus.svg" alt="Indicador de variação positiva ou negativa"/>
-                        </div>
+                    <p>Moedas mais procuradas!</p>
+                    <div class="add-currency-box">
+                        
                     </div>
                     
+
                 </section>
             </div>
         </aside>
@@ -41,11 +36,11 @@
                 <div class="retangle-info">
                     <div class="last-price">
                         <p>Ultimo preço de venda</p>
-                        <span>0.35$</span>
+                        <span id="currency-sell-price"></span>
                     </div>
                     <div class="last-24hour">
                         <p>Variação percentual 24 horas</p>
-                        <span style="color:rgb(57, 145, 76);">0.04%</span>
+                        <span style="color:rgb(57, 145, 76);" id="variation-percentual"></span>
                     </div>
                    
                 </div>
@@ -56,7 +51,7 @@
                         <p>Preço de compra em reais hoje</p>
                         <div class="subfooter-price">
                             <img src="../public/img/lock.svg" alt="Cadeado com valor do preço">
-                            <p id="currency-price">R$4,58</p>
+                            <p id="currency-buy-price"></p>
                             <p class="currency-indicator">BRL</p>
                         </div>
                     </div>
@@ -66,7 +61,7 @@
 
                         <div class="subfooter-price-second">
                             <img src="../public/img/lock.svg" alt="Cadeado com valor do preço">
-                            <p id="currency-price">R$4,56</p>
+                            <p id="currency-sell-price2"></p>
                             <p class="currency-indicator">BRL</p>
                         </div>
                     </div>

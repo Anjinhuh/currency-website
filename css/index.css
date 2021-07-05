@@ -16,6 +16,7 @@
     grid-template-areas: 
     'header header'
     'left   right';
+
 }
 body{
     display: flex;
@@ -28,6 +29,7 @@ body{
     display: flex;
     margin-top: 3rem;
     grid-area: header;
+   
 }
 .header-page > img{
     width: 6.3rem;
@@ -107,6 +109,7 @@ main .principal{
     width: 150rem;
     height: 76.4rem;
     background-color: #FFFFFF;
+    box-shadow: 2rem 2rem 9rem 2rem rgba(0, 0, 0, .519);
 }
 main .principal .retangle-info{
     height:10rem;
