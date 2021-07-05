@@ -173,3 +173,61 @@ main .principal .retangle-info > .last-24hour  {
     padding-left: 6.5rem;
     padding-top: 3.5rem;
 }
+.subfooter-retangle> p{
+    font-size: 1.55rem;
+    color: #645F5F;
+    margin-bottom: .5rem ;
+}
+.subfooter-price{
+    display: flex;
+    width: 36rem;
+    height: 7rem;
+    background-color: #fff;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.subfooter-price img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+.subfooter-price > p{
+    font-size: 1.85rem;
+    color: #3A4061;
+    
+}
+.subfooter-price  > .currency-indicator{
+    margin-left: 15rem;
+}
+.subfooter-retangle-second{
+    margin-left: 3rem;
+}
+
+.subfooter-retangle-second  p{
+    font-size: 1.55rem;
+    color: #645F5F;
+    margin-bottom: .5rem ;
+}
+.subfooter-price-second {
+    display: flex;
+    width: 36rem;
+    height: 7rem;
+    background-color: #fff;
+    
+    align-items: center;
+    justify-content: center;
+}
+.subfooter-price-second > p{
+    font-size: 1.85rem;
+    color: #3A4061;
+}
+.subfooter-price-second img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+.subfooter-price-second > .currency-indicator{
+    margin-left: 15rem;
+}
