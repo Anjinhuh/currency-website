@@ -25,13 +25,41 @@
     const ok = new Date()
     const dataAtual = String(date.getUTCFullYear())+'0'+String(date.getUTCMonth()+1)+ date.getUTCDate()
     const dataAntiga = String(dataAtual-7)
-
-        
+    var currencyType = ["USD-BRL"]
+        function console(resposta){
+            currencyType = []
+            currencyType.push(resposta)
+        }
         window.onload = function (){
             
-            fetch(`https://economia.awesomeapi.com.br/USD-BRL/7?start_data=${dataAntiga}&end_date=${dataAtual}`).then(x =>{
+            fetch(`http://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL`).then(x =>{
+                return x.json()
+            }).then(last =>{
+                    function data(resp){
+                        for(var i in resp){
+                            
+                            var valor = Number(resp[i].bid)
+                            var valorAtualizado = valor.toFixed(3)
+                            $(".add-currency-box").append(`<a href="javascript:console('${resp[i].code+'-'+resp[i].codein}')" class="currency-box">
+                            <div class="fix-currency-box">
+                                <p>${resp[i].code + '-'+resp[i].codein}</p>
+                                <span>R$ ${valorAtualizado}</span>
+                            </div>
+                            <div class="fix-image-box">
+
+                                <img src="../public/img/graphic-plus.svg" alt="Indicador de variação positiva ou negativa"/>
+                                
+                            </div>
+                        </a>`)
+                        }
+                    }
+
+                    $.getJSON(`http://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL`, data);
+                })
+            fetch(`https://economia.awesomeapi.com.br/${currencyType}/7?start_data=${dataAntiga}&end_date=${dataAtual}`).then(x =>{
                 return x.json()
             }).then(precoDolar =>{
+
                 const dolar = precoDolar[0]
                 const date  =  String(dolar.create_date[8]  +  dolar.create_date[9])
         
@@ -95,7 +123,7 @@
                             $("#chartContainer").CanvasJSChart(options);
                             
                         }
-                        $.getJSON(`https://economia.awesomeapi.com.br/USD-BRL/7?start_data=${dataAntiga}&end_date=${dataAtual}`, addData);
+                        $.getJSON(`https://economia.awesomeapi.com.br/${currencyType}/7?start_data=${dataAntiga}&end_date=${dataAtual}`, addData);
                         
                         
                         

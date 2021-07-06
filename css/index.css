@@ -75,6 +75,10 @@ aside .currency-box{
 
     border-radius: 1.5rem;
 }
+aside .currency-box:focus{
+    background-color: #813081 ;
+
+}
 .fix-currency-box{
     margin-left: 1rem;
     display: flex;
@@ -234,3 +238,4 @@ main .principal .retangle-info > .last-24hour  {
 .subfooter-price-second > .currency-indicator{
     margin-left: 15rem;
 }
+
